@@ -5,7 +5,6 @@ class CreateFlashcards < ActiveRecord::Migration[6.0]
       t.string :content
       t.string :answer
       t.string :solution
-      t.references :status, null: false, foreign_key: true
       t.references :list, null: false, foreign_key: true
 
       t.timestamps
