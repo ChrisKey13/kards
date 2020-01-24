@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_144453) do
+ActiveRecord::Schema.define(version: 2020_01_24_155526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,12 +20,11 @@ ActiveRecord::Schema.define(version: 2020_01_24_144453) do
     t.string "content"
     t.string "answer"
     t.string "solution"
-    t.bigint "status_id", null: false
     t.bigint "list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "Not Mastered Yet", null: false
     t.index ["list_id"], name: "index_flashcards_on_list_id"
-    t.index ["status_id"], name: "index_flashcards_on_status_id"
   end
 
   create_table "goals", force: :cascade do |t|
@@ -46,22 +45,14 @@ ActiveRecord::Schema.define(version: 2020_01_24_144453) do
   create_table "lists", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.bigint "goal_id", null: false
     t.bigint "language_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["goal_id"], name: "index_lists_on_goal_id"
     t.index ["language_id"], name: "index_lists_on_language_id"
   end
 
   create_table "mesures", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "statuses", force: :cascade do |t|
-    t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -79,8 +70,6 @@ ActiveRecord::Schema.define(version: 2020_01_24_144453) do
   end
 
   add_foreign_key "flashcards", "lists"
-  add_foreign_key "flashcards", "statuses"
   add_foreign_key "goals", "mesures"
-  add_foreign_key "lists", "goals"
   add_foreign_key "lists", "languages"
 end
