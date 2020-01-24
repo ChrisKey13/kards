@@ -10,10 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_143820) do
+ActiveRecord::Schema.define(version: 2020_01_24_144453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flashcards", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "answer"
+    t.string "solution"
+    t.bigint "status_id", null: false
+    t.bigint "list_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["list_id"], name: "index_flashcards_on_list_id"
+    t.index ["status_id"], name: "index_flashcards_on_status_id"
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.date "date"
+    t.string "recurrence"
+    t.bigint "mesure_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mesure_id"], name: "index_goals_on_mesure_id"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.bigint "goal_id", null: false
+    t.bigint "language_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["goal_id"], name: "index_lists_on_goal_id"
+    t.index ["language_id"], name: "index_lists_on_language_id"
+  end
+
+  create_table "mesures", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +78,9 @@ ActiveRecord::Schema.define(version: 2020_01_24_143820) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "flashcards", "lists"
+  add_foreign_key "flashcards", "statuses"
+  add_foreign_key "goals", "mesures"
+  add_foreign_key "lists", "goals"
+  add_foreign_key "lists", "languages"
 end
