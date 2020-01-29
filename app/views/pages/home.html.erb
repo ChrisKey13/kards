@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <h1>Welcome to your new world of learning</h1>
+  <span>
+  <p>We want to be the reference to help programmers learn the following languages:</p>
+    <% @languages.each do |language| %>
+      <%= language.name %>
+    <% end %>
+  </span>
