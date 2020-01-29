@@ -63,7 +63,7 @@ p 'Now Creating a random number of flashcards for Lists'
   List.all.each do |list|
     rand(10).times do
       flash = Flashcard.create!(
-        title: Faker::ProgrammingLanguage.name,
+        title: Faker::TvShows::MichaelScott.quote,
         content: Faker::TvShows::BojackHorseman.quote,
         solution: Faker::TvShows::RickAndMorty.quote,
         list_id: list.id
