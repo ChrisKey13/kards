@@ -1,7 +1,17 @@
-  <h1>Welcome to your new world of learning</h1>
-  <span>
-  <p>We want to be the reference to help programmers learn the following languages:</p>
-    <% @languages.each do |language| %>
-      <%= language.name %>
-    <% end %>
-  </span>
+<div class="container-navbar">
+  <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+    <div class="d-flex flex-column align-items-left">
+      <h1 class="text-display">Learn Fast & Build Things</h1>
+      <span>
+      <p class="paragraph-display">Kard empowers you to create flashcards, manage them into lists </br> and review them at the intervall you choose.</p>
+      </span>
+      <% if user_signed_in? %>
+        <%= link_to "Dashboard", lists_path, class: 'bouton-red' %>
+      <% else %>
+        <%= link_to "Create Your First Flashcards", new_user_registration_path, class: 'bouton-red' %>
+      <% end %>
+
+    </div>
+    <%= image_tag "coding.svg", class: 'image-display mt-4' %>
+  </div>
+</div>
