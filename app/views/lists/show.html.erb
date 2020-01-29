@@ -23,7 +23,30 @@
             <p>No photo to displayed</p>
           <% end %><br>
           <%= flashcard.title %><br>
-          <%= flashcard.content %>
+
+          <div class="ch mt-4">
+            <div class="ch__comps">
+              <button class="btnc btnc--green"></button>
+              <button class="btnc btnc--yellow"></button>
+              <button class="btnc btnc--red"></button>
+              <span>The solution</span>
+            </div>
+            <pre><code>
+              Ruby Code Goes Here
+            </code></pre>
+          </div>
+
+          <div class="language-ruby highlighter-rouge">
+            <div class="highlight github">
+              <pre class="highlight github">
+                <code>
+              <%= flashcard.content %>
+
+                </code>
+              </pre>
+            </div>
+          </div>
+
           <%= flashcard.status %>
           <%= @list.language.name %><br>
           <%= link_to 'Edit', edit_flashcard_path(flashcard) %>

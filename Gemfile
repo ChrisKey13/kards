@@ -20,9 +20,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'font-awesome-sass', '~> 5.12.0'
-
+gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 gem 'rails-html-sanitizer'
+
+gem 'redcarpet', '~> 3.4'
+gem 'rouge', '~> 3.3'
 
 gem 'faker'
 
