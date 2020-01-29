@@ -10,7 +10,7 @@
     <% @lists.each do |list| %>
     <li>
       <%= link_to list.title, list %>
-      <%= list.language %>
+      <%= list.language.name %>
 
     <% end %>
     </li>
