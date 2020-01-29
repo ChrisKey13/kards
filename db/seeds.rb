@@ -65,8 +65,13 @@ DESCRIPTION = ["It's important to let the Feeling Brain air out all its icky, tw
 TITLE.each do |title|
   List.create!(
     title: title,
-    description: DESCRIPTION[0.to_i],
+    description: DESCRIPTION[rand(4)],
     language_id: Language.first.id
+  )
+  List.create!(
+    title: title,
+    description: DESCRIPTION[rand(4)],
+    language_id: Language.last.id
   )
 end
 

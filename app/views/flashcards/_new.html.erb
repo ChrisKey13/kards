@@ -2,7 +2,6 @@
 <%= simple_form_for [list, flashcard] do |f| %>
   <%= f.input :title %>
   <%= f.input :content %>
-  <%= f.input :answer %>
   <%= f.input :photo, as: :file %>
   <%= f.input :solution %>
   <%= f.submit class: 'btn btn-primary' %>
