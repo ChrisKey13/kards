@@ -23,7 +23,6 @@ require("@rails/actiontext")
 //= require algolia/v3/algoliasearch.min
 //= require algolia/typeahead.jquery
 //= require hogan
-import "../plugins/instantsearch";
 import "bootstrap";
 
 import "controllers"

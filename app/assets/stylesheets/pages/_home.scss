@@ -13,31 +13,105 @@ background-color: white;
   font-size: 40px;
   line-height: 57px;
   color: #3C3C3C;
-  margin-left: 24px;
 }
-.paragraph-display-display {
-  font-family: Work Sans;
-  font-weight: 300;
-  font-size: 24px;
+.paragraph-display {
+  font-family: 'JetBrains Mono';
+  font-weight: 100;
+  font-size: 20px;
   line-height: 28px;
   color: #3C3C3C;
-  margin-left: 24px;
+  padding-right: 80px;
 }
 .image-display {
   width: calc(100% - 700px);
   margin-top: 100px;
-
 }
+
 .bouton-red {
-    width: 600px;
-    height: 51px;
-    padding: 12px 36px;
+    display: inline-block;
+    padding: 12px 12px;
     background-color: #1C1C1C;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 35px;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
+    box-sizing: border-box !important;
+    width: 55%;
+}
+.left-margin {
+  margin-left: 32px;
+}
+.subheader {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 57px;
+  text-align: center;
+  margin-top: 90px;
+}
+.description {
+  width: 1100px;
+  height: 550px;
+  background-color: #F2F6FB;
+  padding: 40px;
+  margin: 40px;
+}
+
+.description-card {
+}
+.subsubheader {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  // color: #6C6C6C;;
+  color: #FF5445;
+  letter-spacing: 2px;
+  text-decoration: underline solid  #FF5445;
+
+}
+.image-description {
+height: 60%;
+}
+
+.image-cta-footer {
+  margin-bottom: -40px;
+}
+
+.end-cta {
+  margin-top: 200px;
+}
+
+.subheader2 {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.description-text {
+  font-size: 16px ;
+  font-weight: 300;
+  font-family: 'JetBrains Mono';
+  color: #1C1C1C;
+  line-height: 24px;
+}
+
+.banner {
+  margin-top: 60px!important;
+}
+
+p span {
+  color: #FF5645;
+  font-weight: 400;
+}
+.orange-line {
+  width: 25%;
+  height: 100%;
 }
