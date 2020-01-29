@@ -4,5 +4,7 @@ class Flashcard < ApplicationRecord
   validates :content, presence: :true
   validates :solution, presence: :true
   validates :answer, absence: :true
+  has_many_attached :photos
+
 
 end
