@@ -1,17 +1,51 @@
 <div class="container-navbar">
-  <div class="d-flex flex-row justify-content-between align-items-center mt-4">
-    <div class="d-flex flex-column align-items-left">
-      <h1 class="text-display">Learn Fast & Build Things</h1>
+  <div class="d-flex flex-row justify-content-between align-items-center mt-4 banner">
+    <div class="d-flex flex-column align-items-left left-margin">
+      <h1 class="text-display mt-4">Learn Fast & Build Things</h1>
       <span>
-      <p class="paragraph-display">Kard empowers you to create flashcards, manage them into lists </br> and review them at the intervall you choose.</p>
+      <p class="paragraph-display mt-4">Kard empowers you to create flashcards, manage them into lists and review them at the intervall you choose.</p>
       </span>
       <% if user_signed_in? %>
-        <%= link_to "Dashboard", lists_path, class: 'bouton-red' %>
+        <%= link_to "Your Lists of Flashcards", lists_path, class: 'bouton-red mt-4' %>
       <% else %>
-        <%= link_to "Create Your First Flashcards", new_user_registration_path, class: 'bouton-red' %>
+        <%= link_to "Create Your First Flashcards", new_user_registration_path, class: 'bouton-red mt-4' %>
       <% end %>
-
     </div>
     <%= image_tag "coding.svg", class: 'image-display mt-4' %>
+  </div>
+
+  <h1 class="subheader">Why kard ?</h1>
+  <div class=" row description description-card align-items-center ">
+    <div class='col-sm-6'>
+      <p class="subsubheader">Leveraging Technology</p>
+      <p class="orange-line"></p>
+      <p class="description-text mt-4">
+        <span>Everything goes fast in Tech World. </span>To stay relevant, you need to <span>keep on learning</span>  and building new stuffs. This can seem daunting sometimes.</br>
+        <p></p></p>
+        <p class="description-text">
+        At Kard, we have created a simple tool to help you with the learning process. So that you spend your time on <span> building amazing products </span> and discovering new technologies.</br>
+      </p>
+        <p></p>
+      <p class="description-text">
+        So have fun with it ! Create flashcards to learn a new language, master the basics or log the mistakes you keep on making. <br>
+      </p>
+        <p></p>
+      <p class="description-text">
+        Or whatever you want to do with it ! The world is chaos,
+      </p>
+        <p></p>
+      <p class="description-text">
+        <span>Make it yours</span>
+      </p>
+      </p>
+    </div>
+      <%= image_tag "technology.svg", class: 'col-sm-6 image-description' %>
+  </div>
+
+  <div class="d-flex flex-column justify-content-center align-items-center end-cta">
+
+    <%= image_tag "dreams.svg", class: 'image-cta-footer' %>
+    <h1 class="subheader mt-n3">Your Programming Dreams Start Now</h1>
+
   </div>
 </div>
