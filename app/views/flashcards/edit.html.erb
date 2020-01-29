@@ -1,0 +1,12 @@
+<div class="container">
+
+  <h3>Edit Your Flashcard</h3>
+  <%= simple_form_for [@flashcard] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.file_field :photo, direct_upload: :true %>
+    <%= f.association :language, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

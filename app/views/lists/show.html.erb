@@ -1,0 +1,40 @@
+
+<div class="container">
+  <h1><%= @list.title %> </h1>
+
+  <br>
+  <p><strong>Description:</strong></p>
+  <%= @list.description %><br>
+
+  <%= link_to 'Edit Your List', edit_list_path(@list) %>
+
+  <%= link_to 'Destroy', list_path(@list), method: :delete, data: { confirm: 'Are you sure?' } %>
+<hr>
+  <div>
+
+    <ol>
+      <ul>
+        <% @list.flashcards.each do |flashcard| %>
+        <li>
+          <% if flashcard.photo.attached? %>
+            <%= cl_image_tag flashcard.photo.key, height: 300, width: 400, crop: :fill, class: 'mt-4' %>
+          <% else %>
+            <p>No photo to displayed</p>
+          <% end %><br>
+          <%= flashcard.title %><br>
+          <%= flashcard.content %>
+          <%= flashcard.language.name %><br>
+          <%= link_to 'Edit', edit_flashcard_path(flashcard) %>
+          <%= link_to "Delete", flashcard_path(flashcard), method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+        </li>
+      </ul>
+
+
+    </ol>
+  </div>
+
+
+  <%= link_to 'Go Back To Homepage', root_path %>
+  <%= render "flashcards/new", list: @list, flashcard: @flashcard %>
+</div>
