@@ -12,6 +12,7 @@ require 'faker'
 
 LANGUAGES = ['Dart', 'Elixir', 'Go', 'Javascript', 'Python', 'Ruby']
 MESURES = ['Day', 'Week', 'Month', 'Year']
+STATUS = ["Not Mastered Yet", "Mastered"]
 
 
 p 'destroying previous languages'
@@ -40,6 +41,18 @@ MESURES.each do |mesure|
       name: mesure
       )
   end
+ p 'The measures have been created'
+
+
+ p "creating the status in"
+ STATUS.each do |status|
+   Status.create!(
+     name: status
+   )
+ end
+
+ p 'The status have been created'
+
 
 List.destroy_all if Rails.env.development?
 Flashcard.destroy_all if Rails.env.development?

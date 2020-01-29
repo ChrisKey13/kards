@@ -2,8 +2,9 @@
 <%= simple_form_for [list, flashcard] do |f| %>
   <%= f.input :title %>
   <%= f.input :content %>
-  <%= f.association :language, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+  <%= f.input :answer %>
   <%= f.input :photo, as: :file %>
+  <%= f.input :solution %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 

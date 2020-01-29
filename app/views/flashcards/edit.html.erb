@@ -4,8 +4,9 @@
   <%= simple_form_for [@flashcard] do |f| %>
     <%= f.input :title %>
     <%= f.input :content %>
+    <%= f.input :answer %>
     <%= f.file_field :photo, direct_upload: :true %>
-    <%= f.association :language, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    <%= f.input :solution %>
     <%= f.submit class: 'btn btn-primary' %>
   <% end %>
 

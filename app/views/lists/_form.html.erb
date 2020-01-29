@@ -3,5 +3,6 @@
 <%= simple_form_for @list do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
+  <%= f.association :language, input_html: { class: "beautiful-dropdown" },
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
