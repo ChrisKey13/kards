@@ -3,3 +3,41 @@
 *= require_tree .
 *= require_self
 */
+body {
+background-color: white;
+}
+.text-display {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 57px;
+  color: #3C3C3C;
+  margin-left: 24px;
+}
+.paragraph-display-display {
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3C3C3C;
+  margin-left: 24px;
+}
+.image-display {
+  width: calc(100% - 700px);
+  margin-top: 100px;
+
+}
+.bouton-red {
+    width: 600px;
+    height: 51px;
+    padding: 12px 36px;
+    background-color: #1C1C1C;
+    border-radius: 4px;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}

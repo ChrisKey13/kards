@@ -9,7 +9,7 @@ class FlashcardsController < ApplicationController
   def create
     @flashcard = Flashcard.new(set_params)
     @flashcard.list = @list
-    if @flashcard.save
+    if @flashcard.save!
       redirect_to list_path(@list)
     else
       render 'lists/show'

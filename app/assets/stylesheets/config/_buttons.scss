@@ -1,0 +1,44 @@
+.black-nav-button {
+  width: 130px;
+  height: 40px;
+  padding: 10px 32px;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  background: #000;
+  text-align: center;
+  text-transform: none;
+  text-shadow: none;
+  color: white;
+  border-radius: 4px;
+  &:hover {
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+
+  }
+}
+.white-nav-button {
+  margin-left: 16px;
+  width: 130px;
+  height: 40px;
+  padding: 10px 32px;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+  text-align: center;
+  text-transform: none;
+  text-shadow: none;
+  color: #6C6C6C;
+  border: 1px solid #6C6C6C;
+  border-radius: 4px;
+  &:hover {
+    background-color: #6C6C6C;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+
+  }
+}
