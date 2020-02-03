@@ -17,8 +17,7 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-require("trix")
-require("@rails/actiontext")
+
 // Replace with your own values
 //= require algolia/v3/algoliasearch.min
 //= require algolia/typeahead.jquery

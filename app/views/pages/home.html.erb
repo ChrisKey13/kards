@@ -3,7 +3,7 @@
     <div class="d-flex flex-column align-items-left left-margin">
       <h1 class="text-display mt-4">Learn Fast & Build Things</h1>
       <span>
-      <p class="paragraph-display mt-4">Kard empowers you to create flashcards, manage them into lists and review them at the intervall you choose.</p>
+      <p class="paragraph-display mt-4">Kard empowers you to create flashcards, manage </br>them into lists and set practice alerts.</p>
       </span>
       <% if user_signed_in? %>
         <%= link_to "Your Lists of Flashcards", lists_path, class: 'bouton-red mt-4' %>
@@ -14,10 +14,8 @@
     <%= image_tag "coding.svg", class: 'image-display mt-4' %>
   </div>
 
-  <h1 class="subheader">Why kard ?</h1>
-  <div class=" row description description-card align-items-center ">
+ <div class=" row description description-card align-items-center ">
     <div class='col-sm-6'>
-      <p class="subsubheader">Leveraging Technology</p>
       <p class="orange-line"></p>
       <p class="description-text mt-4">
         <span>Everything goes fast in Tech World. </span>To stay relevant, you need to <span>keep on learning</span>  and building new stuffs. This can seem daunting sometimes.</br>

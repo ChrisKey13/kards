@@ -22,6 +22,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
+gem 'omniauth-google-oauth2'
+
+
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
