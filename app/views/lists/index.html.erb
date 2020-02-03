@@ -1,20 +1,20 @@
-<div class="container">
-  <h1>Welcome to your new world of learning</h1>
-  <span>
-  <p>We want to be the reference to help programmers learn the following languages:</p>
-    <% @languages.each do |language| %>
-      <%= language.name %>
-    <% end %>
-  </span>
-  <ol class="lists">
-    <% @lists.each do |list| %>
-    <li>
-      <%= link_to list.title, list %>
-      <%= list.language.name %>
+  <div class="container">
+    <h1>Welcome to your new world of learning</h1>
+    <span>
+    <p>We want to be the reference to help programmers learn the following languages:</p>
+      <% @languages.each do |language| %>
+        <%= language.name %>
+      <% end %>
+    </span>
+    <ol class="lists">
+      <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.title, list %>
+        <%= list.language.name %>
 
-    <% end %>
-    </li>
-  </ol>
+      <% end %>
+      </li>
+    </ol>
 
-  <%= link_to 'Add A New List', new_list_path, class: 'btn btn-primary'  %>
-</div>
+    <%= link_to 'Add A New List', new_list_path, class: 'btn btn-primary'  %>
+  </div>

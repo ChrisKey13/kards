@@ -50,10 +50,20 @@
             <p>No photo to displayed</p>
           <% end %><br>
           <%= flashcard.title %><br>
-            <pre><code>
-              Ruby Code Goes Here
-            </code></pre>
+          <div class="flashcard-game-card-content">
+            <div class="flashcard-game-card-content-markdown">
+              <p>How does a background process work?</p>
 
+            </div>
+            <textarea class="form-control" id="user-guess-text-area" autofocus="" rows="4" placeholder="Enter your answer here (alt + enter to flip card)"></textarea>
+            <a class="btn btn-default flip-button" href="javascript:void(0)">
+              <i class="material-icons"></i> flip card
+            </a>
+          </div>
+<!--             <pre><code>
+              Ruby Code Goes Here
+            </code></pre> -->
+<!--
           <div class="language-ruby highlighter-rouge">
             <div class="highlight github">
               <pre class="highlight github">
@@ -64,7 +74,7 @@
               </pre>
             </div>
           </div>
-
+ -->
           <%= flashcard.status %>
           <%= @list.language.name %><br>
           <%= link_to 'Edit', edit_flashcard_path(flashcard) %>
