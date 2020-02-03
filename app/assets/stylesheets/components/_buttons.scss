@@ -5,3 +5,24 @@
   color: #fff;
   font-family: 'Jost';
 }
+.practice-button {
+  color: white;
+  background-color: #FF5645!important;
+  &:hover {
+    background-color: #fff!important;
+    color: #FF5645;
+    border: 1px solid #FF5645;
+  }
+}
+.log-button {
+  min-width: 183px;
+  margin-bottom: 30px;
+  background-color: #FF5645;
+  color: #fff;
+  height: 62px;
+  font-size: 20px;
+  &:hover {
+    background-color: #d53e4b;
+    color: #fff;
+  }
+}

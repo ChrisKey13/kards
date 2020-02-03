@@ -7,7 +7,7 @@ body {
 background-color: white;
 }
 .text-display {
-  font-family: Rubik;
+  font-family: Jost;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -17,7 +17,7 @@ background-color: white;
 .paragraph-display {
   font-family: 'JetBrains Mono';
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 28px;
   color: #3C3C3C;
   padding-right: 80px;
@@ -28,18 +28,26 @@ background-color: white;
 }
 
 .bouton-red {
-    display: inline-block;
-    padding: 12px 12px;
-    background-color: #1C1C1C;
-    border-radius: 4px;
-    font-size: 20px;
-    line-height: 35px;
-    font-weight: 600;
-    color: #fff;
+  font-family: 'Jost';
+  display: inline-block;
+  padding: 16px;
+  background-color: #1C1C1C;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: none !important;
+  box-sizing: border-box !important;
+  width: 60%;
+
+  &:hover {
     text-decoration: none;
-    text-align: left;
-    box-sizing: border-box !important;
-    width: 55%;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
 }
 .left-margin {
   margin-left: 32px;
@@ -58,7 +66,7 @@ background-color: white;
   height: 550px;
   background-color: #F2F6FB;
   padding: 40px;
-  margin: 40px;
+  margin: 200px 40px 40px 40px;
 }
 
 .description-card {
@@ -100,7 +108,7 @@ height: 60%;
   font-weight: 300;
   font-family: 'JetBrains Mono';
   color: #1C1C1C;
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .banner {

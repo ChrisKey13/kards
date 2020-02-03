@@ -70,7 +70,7 @@ TITLE.each do |title|
   )
   List.create!(
     title: title,
-    description: DESCRIPTION[rand(4)],
+    description: DESCRIPTION[0],
     language_id: Language.last.id
   )
 end

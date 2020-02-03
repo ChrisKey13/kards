@@ -8,8 +8,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-        <% unless devise_controller? || controller_name == 'pages' %>
-            <div class="">
+        <% unless devise_controller? || controller_name == 'pages' || controller_name == 'lists' && action_name == 'show'%>
+            <div class="form-inline">
 
               <%= form_tag lists_path, method: :get do %>
                 <%= text_field_tag :query,
@@ -26,14 +26,16 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <% if user_signed_in? %>
-            <%= link_to "Lists", lists_path, class: "nav-link" %>
+            <% unless controller_name == 'lists' && action_name == 'index' %>
+              <%= link_to "Lists", lists_path, class: 'black-nav-button'  %>
+            <% end %>
           <% else %>
             <%= link_to "Sign Up", new_user_registration_path, class: 'black-nav-button' %>
           <% end %>
         </li>
         <li class="nav-item">
           <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'bouton-white-nav' %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'white-nav-button' %>
           <% else %>
             <%= link_to "Log In", new_user_session_path, class: 'white-nav-button'%>
           <% end %>
