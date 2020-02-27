@@ -3,10 +3,9 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+//= require jquery
+//= require jquery_ujs
 
-
-require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 //= require cloudinary
@@ -26,8 +25,7 @@ import "bootstrap";
 
 import "controllers"
 
-$(document).ready(function() {
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
+var card = document.querySelector('.flashcard');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
 });

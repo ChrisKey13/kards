@@ -1,0 +1,44 @@
+.flashcard-content {
+  width: 64px;
+  height: 160px;
+  background-color: #33CC33;
+}
+
+.flashcard-status {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.flashcard-row {
+  background-color: #fff;
+  margin: 12px;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  padding: 24px;
+}
+
+.flashcard-row > .paragraph-display {
+  font-size: 12px;
+  text-align: center;
+}
+
+.flashcard1 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Jost';
+  color: #3C3C3C;
+  background-color: #fff;
+  margin: 12px;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

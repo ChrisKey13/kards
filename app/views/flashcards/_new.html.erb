@@ -1,9 +1,9 @@
 <h3>Create Your Flashcard</h3>
 <%= simple_form_for [list, flashcard] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.input :photo, as: :file, direct_upload: true%>
+  <%= f.input :question %>
   <%= f.input :solution %>
+  <%= f.input :code %>
+  <%= f.input :photo, as: :file, direct_upload: true%>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 

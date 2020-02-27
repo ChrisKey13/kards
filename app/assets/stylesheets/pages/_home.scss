@@ -6,13 +6,20 @@
 body {
 background-color: white;
 }
+.signup-hero {}
+.github-signup {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #ffffff;
+}
 .text-display {
   font-family: Jost;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 80px;
   line-height: 57px;
-  color: #3C3C3C;
+  color: #191a1b;
 }
 .paragraph-display {
   font-family: 'JetBrains Mono';

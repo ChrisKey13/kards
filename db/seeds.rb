@@ -44,12 +44,12 @@ MESURES.each do |mesure|
  p 'The measures have been created'
 
 
- p "creating the status in"
- STATUS.each do |status|
-   Status.create!(
-     name: status
-   )
- end
+ # p "creating the status in"
+ # STATUS.each do |status|
+ #   Status.create!(
+ #     name: status
+ #   )
+ # end
 
  p 'The status have been created'
 
@@ -79,11 +79,11 @@ p '5 Lists have been created'
 
 p 'Now Creating a random number of flashcards for Lists'
   List.all.each do |list|
-    rand(10).times do
+    10.times do
       flash = Flashcard.create!(
-        title: Faker::TvShows::MichaelScott.quote,
-        content: Faker::TvShows::BojackHorseman.quote,
+        question: Faker::TvShows::RickAndMorty.quote,
         solution: Faker::TvShows::RickAndMorty.quote,
+        code: Faker::Markdown.inline_code,
         list_id: list.id
       )
       # flash.photo.attach(io: 'https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg#/media/File:NASA-Apollo8-Dec24-Earthrise.jpg', filename: 'nes.png', content_type: 'image/png')
