@@ -4,7 +4,7 @@ class ListsController < ApplicationController
   def index
     @languages = Language.all
     if params[:query].present?
-      @lists = List.search_by_title_and_description(params[:query])
+      @lists = current_user.lists.search_by_title_and_description(params[:query])
     else
       @lists = List.all
     end
@@ -19,6 +19,7 @@ class ListsController < ApplicationController
   end
 
   def create
+    authorize @list
     @list = List.new(list_params)
     if @list.save
       redirect_to root_path
@@ -31,6 +32,7 @@ class ListsController < ApplicationController
   end
 
   def update
+    authorize @list
     if @list.update(list_params)
       redirect_to list_path(@list), notice: 'Your list has been successfully created'
     else
@@ -39,6 +41,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    authorize @list
     if @list.destroy
       redirect_to root_path, notice: 'Your list was successfully destroyed'
     else
