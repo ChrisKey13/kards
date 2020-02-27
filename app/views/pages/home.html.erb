@@ -1,15 +1,18 @@
 <div class="container-navbar">
   <div class="d-flex flex-row justify-content-between align-items-center mt-4 banner">
     <div class="d-flex flex-column align-items-left left-margin">
-      <h1 class="text-display mt-4">Learn Fast & Build Things</h1>
+      <h1 class="text-display mt-4">Learn Faster.</h1>
       <span>
-      <p class="paragraph-display mt-4">Kard empowers you to create flashcards, manage </br>them into lists and set practice alerts.</p>
+      <p class="paragraph-display mt-4">Build Your Own Learning Process</br>Practice At Your Own Pace. Do It Your Way</p>
       </span>
       <% if user_signed_in? %>
         <%= link_to "Your Lists of Flashcards", lists_path, class: 'bouton-red mt-4' %>
       <% else %>
-        <%= link_to "Create Your First Flashcards", new_user_registration_path, class: 'bouton-red mt-4' %>
+        <div class="signup-hero mt-4 d-flex flex-row align-iems-centerjustify-content-around">
+          <%= image_tag "github.svg", class: 'github-signup' %>
+          <%= link_to "Sign Up (it's free)", new_user_registration_path %>
       <% end %>
+        </div>
     </div>
     <%= image_tag "coding.svg", class: 'image-display mt-4' %>
   </div>
