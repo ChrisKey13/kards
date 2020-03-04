@@ -44,7 +44,7 @@
   line-height: 25px;
 }
 .second-header-list {
-  font-family: "Rubik";
+  font-family: "Jost";
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -62,4 +62,59 @@
 .flashcard-view {
   height: 250px;
   width: 150px;
+}
+
+.breadcrumb {
+  box-sizing: border-box;
+  display:flex;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #2b2d36;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: 'Jost';
+  font-size:20px;
+  font-weight:600;
+  height:100%;
+  line-height:32px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  min-width:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  text-rendering:optimizelegibility;
+  white-space:nowrap;
+  -webkit-box-align:center;
+  -webkit-font-smoothing:antialiased;
+  background-color: #fff;
+}
+.name {
+  align-items :center;
+  font-family: "Jost";
+  letter-spacing: 2px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  text-rendering: optimizelegibility;
+  text-transform:capitalize;
+  transition-delay:0s;
+  transition-duration:0.2s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  white-space:nowrap;
+}
+.dashboard-title {
+  font-family: 'Jost';
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #2b2d36;
 }
