@@ -66,9 +66,11 @@ ActiveRecord::Schema.define(version: 2020_01_29_003957) do
     t.string "title"
     t.string "description"
     t.bigint "language_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["language_id"], name: "index_lists_on_language_id"
+    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "mesures", force: :cascade do |t|
@@ -93,4 +95,5 @@ ActiveRecord::Schema.define(version: 2020_01_29_003957) do
   add_foreign_key "flashcards", "lists"
   add_foreign_key "goals", "mesures"
   add_foreign_key "lists", "languages"
+  add_foreign_key "lists", "users"
 end

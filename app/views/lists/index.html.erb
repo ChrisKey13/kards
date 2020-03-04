@@ -1,20 +1,48 @@
-  <div class="container">
-    <h1>Welcome to your new world of learning</h1>
-    <span>
-    <p>We want to be the reference to help programmers learn the following languages:</p>
-      <% @languages.each do |language| %>
-        <%= language.name %>
-      <% end %>
-    </span>
-    <ol class="lists">
-      <% @lists.each do |list| %>
-      <li>
-        <%= link_to list.title, list %>
-        <%= list.language.name %>
+<div class="dashboard">
 
-      <% end %>
-      </li>
-    </ol>
-
-    <%= link_to 'Add A New List', new_list_path, class: 'btn btn-primary'  %>
+  <div class="sidebar">
+    <div>
+      <div class="sidebar-element">
+          <h1 class="name">My Lists</h1>
+      </div>
+      <div class="sidebar-element">
+        <h1 class="name">Activity Feed</h1>
+      </div>
+    </div>
+    <div class="sidebar-element">
+      <h1 class="name">Archived Lists</h1>
+    </div>
   </div>
+  <div class="content-dashboard">
+    <div class="dashboard-grid-header-wrapper">
+      <div class="dashboard-grid-header">
+        <div class="breadcrumb">
+        <span font-weight="semiBold" class="dashboard-title">My Lists of Flashcards</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="rightPanel">
+      <div class="right-control-panel">
+        <div class="rightPanel-buttons">
+          <div id="loom-dashboard-record-button">
+            <%= link_to "Add A Flashcard", new_list_path, class: 'button-new-list' %>
+          </div>
+         </div>
+        </div>
+    </div>
+    <div class="grid-wrapper">
+      <div class="list-grid">
+        <div class="list-grid-header">
+          <span class="list-header">All Lists</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+

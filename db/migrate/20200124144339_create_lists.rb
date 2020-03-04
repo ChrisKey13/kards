@@ -4,6 +4,7 @@ class CreateLists < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :description
       t.references :language, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

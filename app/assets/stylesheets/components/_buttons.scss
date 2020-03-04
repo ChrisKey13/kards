@@ -26,3 +26,90 @@
     color: #fff;
   }
 }
+
+.bouton-text-nav {
+  color: #454A51;
+  font-family: "Jost";
+  font-size: 14px;
+  height: auto;
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-left: 40px;
+  &:hover {
+    text-decoration: none;
+    color: #2b2d36;
+  }
+  &:hover:after {
+      content: '';
+      width: calc(100% + 20px);
+      height: 2px;
+      background-color: #f4364c;
+      position: absolute;
+      right: -10px;
+      bottom: -30px;
+  }
+}
+
+.button-new-list {
+  align-items:center;
+  background-color:rgba(0, 0, 0, 0);
+  border-bottom-color:rgba(81, 108, 240, 0.5);
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-left-color:rgba(81, 108, 240, 0.5);
+  border-left-style:solid;
+  border-left-width:1px;
+  border-right-color:rgba(81, 108, 240, 0.5);
+  border-right-style:solid;
+  border-right-width:1px;
+  border-top-color:rgba(81, 108, 240, 0.5);
+  border-top-style:solid;
+  border-top-width:1px;
+  box-sizing:border-box;
+  color:rgb(81, 108, 240);
+  cursor:pointer;
+  display:block;
+  font-size:14px;
+  font-stretch:100%;
+  font-style:normal;
+  font-weight:500;
+  font-family: "Jost";
+  height:40px;
+  justify-content:center;
+  letter-spacing:normal;
+  line-height:22.12px;
+  padding-bottom:0px;
+  padding-left:19.88px;
+  padding-right:19.88px;
+  padding-top:0px;
+  pointer-events:auto;
+  text-align:center;
+  text-decoration-color: none;
+  text-indent:0px;
+  text-rendering:auto;
+  text-shadow:none;
+  text-transform:none;
+  transition-delay:0s, 0s;
+  transition-duration:0.6s, 0.6s;
+  transition-property:background-color, border-color;
+  transition-timing-function:ease, ease;
+  white-space:nowrap;
+  width:100%;
+}
+
+
+.list-header {
+  box-sizing:border-box;
+  color: #2b2d36;
+  display:block;
+  font-family:"Jost";
+  font-size:18px;
+  font-weight:700;
+  height:28px;
+  line-height:28.08px;
+  text-rendering:optimizelegibility;
+  width:804px;
+  -webkit-font-smoothing:antialiased;
+}
