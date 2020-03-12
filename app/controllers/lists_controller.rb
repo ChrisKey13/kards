@@ -6,7 +6,7 @@ class ListsController < ApplicationController
     if params[:query].present?
       @lists = current_user.lists.search_by_title_and_description(params[:query])
     else
-      @lists = List.all
+      @lists = current_user.lists
     end
   end
 
@@ -19,10 +19,10 @@ class ListsController < ApplicationController
   end
 
   def create
-    authorize @list
     @list = List.new(list_params)
+    @list.user = current_user
     if @list.save
-      redirect_to root_path
+      redirect_to lists_path
     else
       render :new
     end
@@ -52,7 +52,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title, :description, :language_id)
+    params.require(:list).permit(:title, :description, :language_id, :photo)
   end
 
   def set_list

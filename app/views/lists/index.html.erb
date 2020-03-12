@@ -13,7 +13,7 @@
       <h1 class="name">Archived Lists</h1>
     </div>
   </div>
-  <div class="content-dashboard">
+  <div class="content-dashboard fixed-top">
     <div class="dashboard-grid-header-wrapper">
       <div class="dashboard-grid-header">
         <div class="breadcrumb">
@@ -27,7 +27,7 @@
       <div class="right-control-panel">
         <div class="rightPanel-buttons">
           <div id="loom-dashboard-record-button">
-            <%= link_to "Add A Flashcard", new_list_path, class: 'button-new-list' %>
+            <%= link_to "Add A New List", new_list_path, class: 'button-new-list' %>
           </div>
          </div>
         </div>
@@ -37,6 +37,32 @@
         <div class="list-grid-header">
           <span class="list-header">All Lists</span>
         </div>
+        <div class="list-grid-container">
+          <div class="d-flex flex-wrap flex-row align-items-center mt-4">
+            <% @lists.each do |list| %>
+            <div class="list-card d-flex flex-row align-items-center justify-content-around">
+              <span class="list-play-icon">
+                <i class="material-icons play-icon">
+                play_circle_outline
+                </i>
+              </span>
+              <div class="d-flex flex-row align-items-left flex-grow list-elements">
+                <span>
+                  <%= list.title %>
+                </span>
+<!--                 <span>
+                  <%= list.created_at.to_date %>
+
+                </span>
+ -->
+              </div>
+            </div>
+
+        <% end %>
+          </div>
+
+
+          </div>
       </div>
     </div>
   </div>
