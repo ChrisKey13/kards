@@ -270,6 +270,8 @@
   white-space:nowrap;
   width:100%;
   -webkit-font-smoothing:antialiased;
+  position: fixed;
+
 }
 .content-dashboard {
   box-shadow:rgba(255, 255, 255, 0.5) 0px 4px 12px 0px;
@@ -334,4 +336,24 @@
   padding-bottom:16px;
   padding-top:32px;
   width:100%;
+}
+
+.list-grid-header {
+  line-height:22.12px;
+  margin-bottom:20px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  padding-bottom:8px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:8px;
+}
+
+.rightPanel {
+  margin-top: 60px;
+}
+
+.list-grid-container {
+    margin-top: 32px;
 }

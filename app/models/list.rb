@@ -1,5 +1,7 @@
 class List < ApplicationRecord
   has_many :flashcards, dependent: :destroy
+  has_one_attached :photo
+  belongs_to  :user
   belongs_to :language
   include PgSearch::Model
   pg_search_scope :search_by_title_and_description,
