@@ -94,22 +94,28 @@
   background-color: #fff;
 }
 .name {
-  align-items :center;
   font-family: "Jost";
-  letter-spacing: 2px;
-  display: block;
-  box-sizing: border-box;
   font-size: 16px;
-  font-weight: 400;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  text-rendering: optimizelegibility;
+  position:relative;
+  text-rendering:optimizelegibility;
   text-transform:capitalize;
   transition-delay:0s;
   transition-duration:0.2s;
-  transition-property: color;
-  transition-timing-function: ease-in-out;
+  transition-property:background-color;
+  transition-timing-function:ease-in-out;
   white-space:nowrap;
+  font-weight: 600;
+  -webkit-box-direction:normal;
+  -webkit-font-smoothing:antialiased;
+  color:rgb(43, 45, 54);
+  &:hover {
+    background-color: $red;
+    text-decoration: none;
+    text-transform: none;
+    color: $main;
+    text-transform: none;
+    text-decoration: none;
+  }
 }
 .dashboard-title {
   font-family: 'Jost';
@@ -118,3 +124,4 @@
   line-height: 28px;
   color: #2b2d36;
 }
+

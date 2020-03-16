@@ -44,6 +44,11 @@
   width:198px;
   -webkit-box-direction:normal;
   -webkit-font-smoothing:antialiased;
+
+  &:hover {
+    background-color: $red;
+    opacity: 0.8;
+  }
 }
 
 .sidebar {
@@ -58,6 +63,7 @@
   color:rgb(43, 45, 54);
   display:flex;
   flex-direction:column;
+  align-items: left;
   justify-content: space-between;
   font-family: "Rubik", Helvetica, sans-serif;
   font-size:14px;
