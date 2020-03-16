@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <div>
+      <h1 class="name"><%= link_to "My Lists", lists_path, :class => current_class?(lists_path)  %></h1>
+      <h1 class="name"><%= link_to "Activity Feed", activity_path, :class => current_class?(activity_path)  %></h1>
+  </div>
+  <div>
+    <h1 class="name"><%= link_to "Archive", archive_path, :class => current_class?(archive_path)  %></h1>
+  </div>
+</div>

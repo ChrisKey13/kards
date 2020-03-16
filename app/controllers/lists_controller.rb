@@ -1,5 +1,7 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :destroy, :new, :edit, :update]
+
 
   def index
     @languages = Language.all
@@ -41,9 +43,9 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    authorize @list
     if @list.destroy
-      redirect_to root_path, notice: 'Your list was successfully destroyed'
+      redirect_to lists_path
+      flash[:notice] = 'Your list was successfully destroyed'
     else
       render :show
     end

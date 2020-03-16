@@ -5,4 +5,13 @@ class PagesController < ApplicationController
   def home
     @languages = Language.all
   end
+
+  def activity
+
+  end
+
+  def archive
+
+  end
+
 end
