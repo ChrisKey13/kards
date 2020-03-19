@@ -107,14 +107,14 @@ p 'Now Creating a random number of flashcards for Lists'
       # flash.photo.attach(io: 'https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg#/media/File:NASA-Apollo8-Dec24-Earthrise.jpg', filename: 'nes.png', content_type: 'image/png')
     end
 
-  list = List.new(
-    title: TITLE[0],
-    description: DESCRIPTION[0],
-    language_id: Language.last.id,
-    user_id: User.first.id
-    )
-  file = URI.open(PICTURE_LINKS[rand(4)])
-  list.photo.attach(io:file, filename: `#{FILE_NAME[rand(4)]}` + '.png', content_type: 'image/png')
-  list.save
+#   list = List.new(
+#     title: TITLE[0],
+#     description: DESCRIPTION[0],
+#     language_id: Language.last.id,
+#     user_id: User.first.id
+#     )
+#   file = URI.open(PICTURE_LINKS[rand(4)])
+#   list.photo.attach(io:file, filename: `#{FILE_NAME[rand(4)]}` + '.png', content_type: 'image/png')
+#   list.save
 
 end
