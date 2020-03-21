@@ -8,7 +8,7 @@ class ListsController < ApplicationController
     if params[:query].present?
       @lists = current_user.lists.search_by_title_and_description(params[:query])
     else
-      @lists = current_user.lists
+      @lists = List.all
     end
   end
 

@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'pg_search', '~> 2.3.0'
 
 gem 'jquery-rails'
-
+gem 'omniauth-github'
 gem 'pundit'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
@@ -22,6 +22,9 @@ gem 'webpacker', '~> 4.x'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
+gem 'doorkeeper'
+
 
 gem 'omniauth-google-oauth2'
 
