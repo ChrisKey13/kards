@@ -4,6 +4,16 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+
+
+    <div class="row">
+      <div class="col-sm-4">
+        <%= image_tag user_avatar(resource, 100), class: "rounded-circle" %>
+      </div>
+      <div class="col-sm-8">
+        <%= f.file_field :avatar, class: 'form-labels'%>
+      </div>
+      </div>
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

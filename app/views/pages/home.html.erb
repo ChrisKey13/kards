@@ -10,7 +10,7 @@
       <% else %>
         <div class="signup-hero mt-4 d-flex flex-row align-iems-centerjustify-content-around">
           <%= image_tag "github.svg", class: 'github-signup' %>
-          <%= link_to "Sign Up (it's free)", new_user_registration_path %>
+          <%= link_to "Sign Up (it's free)", user_github_omniauth_authorize_path %>
       <% end %>
         </div>
     </div>

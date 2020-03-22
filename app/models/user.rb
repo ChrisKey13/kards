@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :timeoutable,
          :recoverable, :rememberable, :validatable, :omniauthable
   has_many :lists
+  has_one_attached :avatar
   has_many :services
   has_many :access_grants,
           class_name: 'Doorkeeper::AccessGrant',

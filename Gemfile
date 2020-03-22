@@ -12,6 +12,14 @@ gem 'pg_search', '~> 2.3.0'
 gem 'jquery-rails'
 gem 'omniauth-github'
 gem 'pundit'
+
+gem "mini_magick"
+
+gem 'image_processing', '~> 1.2'
+
+gem 'omniauth-google-oauth2'
+
+gem 'gravatar_image_tag', '~> 1.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
@@ -24,10 +32,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
 gem 'doorkeeper'
-
-
-gem 'omniauth-google-oauth2'
-
 
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
