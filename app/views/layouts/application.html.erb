@@ -16,9 +16,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless current_page?(new_user_registration_path) || devise_controller? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
-    <% unless controller_name == 'pages' && action_name == 'home'%>
+    <% unless controller_name == 'pages' && action_name == 'home' || devise_controller? %>
       <%= render 'shared/sidebar' %>
     <% end %>
     <%= yield %>
