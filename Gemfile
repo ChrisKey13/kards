@@ -38,7 +38,7 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 gem 'rails-html-sanitizer'
 
-gem 'redcarpet', '~> 3.4'
+gem 'redcarpet', '~> 3.5'
 gem 'rouge', '~> 3.3'
 
 gem 'faker'
