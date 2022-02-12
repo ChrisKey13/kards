@@ -21,7 +21,7 @@ gem 'omniauth-google-oauth2'
 
 gem 'gravatar_image_tag', '~> 1.2'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
