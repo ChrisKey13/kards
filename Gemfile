@@ -15,7 +15,7 @@ gem 'pundit'
 
 gem "mini_magick"
 
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 gem 'omniauth-google-oauth2'
 
